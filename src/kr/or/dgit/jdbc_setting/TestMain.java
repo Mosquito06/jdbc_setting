@@ -2,7 +2,10 @@ package kr.or.dgit.jdbc_setting;
 
 import java.sql.Connection;
 
+import javax.sql.rowset.JdbcRowSet;
+
 import kr.or.dgit.jdbc_setting.jdbc.DBCon;
+import kr.or.dgit.jdbc_setting.jdbc.jdbcUtil;
 
 public class TestMain {
 
@@ -11,6 +14,8 @@ public class TestMain {
 		
 		Connection connection = dbCon.getConnection();
 		System.out.println(connection);
+		
+		jdbcUtil.close(connection);
 		
 	}
 
