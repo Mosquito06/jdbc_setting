@@ -6,6 +6,8 @@ import javax.sql.rowset.JdbcRowSet;
 
 import kr.or.dgit.jdbc_setting.jdbc.DBCon;
 import kr.or.dgit.jdbc_setting.jdbc.jdbcUtil;
+import kr.or.dgit.jdbc_setting.service.DbService;
+import kr.or.dgit.jdbc_setting.service.InitService;
 
 public class TestMain {
 
@@ -15,8 +17,14 @@ public class TestMain {
 		Connection connection = dbCon.getConnection();
 		System.out.println(connection);
 		
-		// DB연결에는 오랜 시간이 걸리기 때문에 수행 종료 시에 종료해주는 것이 좋음
+		DbService service = InitService.getInstance();
+		service.service();
+				
+		
+		
+		// DB연결에는 오랜 시간이 걸리기 때문에 프로그램 종료 시에 연결을 끊어 주는 것이 좋음
 		jdbcUtil.close(connection);
+		
 		
 	}
 
