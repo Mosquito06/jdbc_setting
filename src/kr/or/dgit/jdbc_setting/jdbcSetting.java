@@ -34,6 +34,7 @@ public class jdbcSetting extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(1, 0, 0, 0));
+		setLocationRelativeTo(null);
 		
 		JButton btnInit = new JButton(new BtnAction("√ ±‚»≠"));
 		contentPane.add(btnInit);

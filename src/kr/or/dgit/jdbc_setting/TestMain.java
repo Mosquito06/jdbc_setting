@@ -22,14 +22,14 @@ public class TestMain {
 		DbService service = InitService.getInstance();
 		service.service();
 				
-		service = ImportService.getInstance();
+		/*service = ImportService.getInstance();
 		service.service();
 		
 		service = ExportService.getInstance();
 		service.service();
 		
 		// DB연결에는 오랜 시간이 걸리기 때문에 프로그램 종료 시에 연결을 끊어 주는 것이 좋음
-		jdbcUtil.close(connection);
+		jdbcUtil.close(connection);*/
 		
 		
 	}
